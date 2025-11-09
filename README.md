@@ -59,8 +59,8 @@ I'm currently diving deep into advanced topics like NLP and Reinforcement Learni
 ## **Stats**
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=[YourUsername]&show_icons=true&theme=vision-friendly-dark" alt="Your GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api?username=LokarajR&show_icons=true&theme=vision-friendly-dark" alt="Your GitHub Stats" />
 </p>
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=[YourUsername]&layout=compact&theme=vision-friendly-dark" alt="Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=LokarajR&layout=compact&theme=vision-friendly-dark" alt="Top Languages" />
 </p>
