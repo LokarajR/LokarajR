@@ -59,8 +59,10 @@ I'm currently working on ML topics like NLP and Reinforcement Learning. I'm alwa
 
 ## **Stats**
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=LokarajR&show_icons=true&theme=vision-friendly-dark" alt="Your GitHub Stats" />
-  &nbsp;&nbsp;
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=LokarajR&layout=compact&theme=vision-friendly-dark" alt="Top Languages" />
+<p align="left">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp&nbsp;
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=LokarajR&theme=tokyonight" alt="naveen-jayaraj streak" />
+<a/>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=LokarajR&layout=compact&theme=tokyonight" alt="Top Languages" />
 </p>
