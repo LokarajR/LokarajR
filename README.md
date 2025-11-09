@@ -12,10 +12,10 @@ I'm currently working on ML topics like NLP and Reinforcement Learning. I'm alwa
   <a href="https://github.com/LokarajR" target="_blank">
     <img src="https://img.shields.io/github/followers/LokarajR?style=for-the-badge&logo=github&label=Follow&color=blue" alt="GitHub Followers"/>
   </a>
-  <a href="[Your LinkedIn URL]" target="_blank">
+  <a href="https://www.linkedin.com/in/lokarajr/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
   </a>
-  <a href="[Your Portfolio/Blog URL]" target="_blank">
+  <a href="[Portfolio/Blog URL]" target="_blank">
     <img src="https://img.shields.io/badge/Portfolio-website-blue?style=for-the-badge&logo=lighttpd&color=green" alt="Portfolio"/>
   </a>
   </p>
