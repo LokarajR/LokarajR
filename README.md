@@ -60,7 +60,7 @@ I'm currently working on ML topics like NLP and Reinforcement Learning. I'm alwa
 ## **Stats**
 
 <p align="left">
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=LokarajR&theme=tokyonight" alt="naveen-jayaraj streak" />
 <a/>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;
