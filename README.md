@@ -9,8 +9,8 @@ I'm currently diving deep into advanced topics like NLP and Reinforcement Learni
 
 
 <p align="left">
-  <a href="https://github.com/[LokarajR]" target="_blank">
-    <img src="https://img.shields.io/github/followers/[LokarajR]?style=for-the-badge&logo=github&label=Follow&color=blue" alt="GitHub Followers"/>
+  <a href="https://github.com/LokarajR" target="_blank">
+    <img src="https://img.shields.io/github/followers/LokarajR?style=for-the-badge&logo=github&label=Follow&color=blue" alt="GitHub Followers"/>
   </a>
   <a href="[Your LinkedIn URL]" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
