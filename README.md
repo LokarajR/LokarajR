@@ -66,6 +66,6 @@ I'm currently working on ML topics like NLP and Reinforcement Learning. I'm alwa
 </p>
 
 <p align="center">
-  <img src="https://leetcard.jacoblin.cool/LokarajR?theme=dark&font=Fira%20Code&ext=heatmap" alt="LeetCode Card" />
+  <img src="https://leetcard.jacoblin.cool/AZF12FQrNh?theme=dark&font=Fira%20Code&ext=heatmap" alt="LeetCode Card" />
 </p>
 
