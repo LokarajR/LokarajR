@@ -59,39 +59,41 @@ I'm currently working on ML topics like NLP and Reinforcement Learning. I'm alwa
 
 ## **Stats**
 
+<p align="center">
+  <img
+    src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=LokarajR&theme=tokyonight"
+    width="100%"
+  />
+</p>
 <table width="100%">
   <tr>
-    <!-- LEFT COLUMN -->
-    <td width="62%" valign="top">
-      <!-- Profile card (shrunk by width) -->
+    <!-- Top Languages by Repo -->
+    <td width="33%" align="center">
       <img
-        src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=LokarajR&theme=tokyonight"
-        width="100%"
+        src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=LokarajR&theme=tokyonight"
+        width="90%"
       />
-      <br/>
-      <!-- Language cards row -->
-      <table width="100%">
-        <tr>
-          <td width="50%" align="center">
-            <img
-              src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=LokarajR&theme=tokyonight"
-              width="95%"
-            />
-          </td>
-          <td width="50%" align="center">
-            <img
-              src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=LokarajR&theme=tokyonight"
-              width="95%"
-            />
-          </td>
-        </tr>
-      </table>
     </td>
-    <!-- RIGHT COLUMN -->
-    <td width="38%" valign="top" align="center">
+    <!-- Top Languages by Commit -->
+    <td width="33%" align="center">
+      <img
+        src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=LokarajR&theme=tokyonight"
+        width="90%"
+      />
+    </td>
+    <!-- LeetCode -->
+    <td width="34%" align="center">
       <img
         src="https://leetcard.jacoblin.cool/AZF12FQrNh?theme=dark&font=Fira%20Code&ext=heatmap"
+        width="90%"
       />
     </td>
   </tr>
 </table>
+<p align="center">
+  <img
+    src="https://github.com/LokarajR/LokarajR/blob/output/github-snake-dark.svg"
+    alt="github contribution snake"
+  />
+</p>
+
