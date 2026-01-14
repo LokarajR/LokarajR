@@ -59,13 +59,39 @@ I'm currently working on ML topics like NLP and Reinforcement Learning. I'm alwa
 
 ## **Stats**
 
-<p align="center">
-  <img height="180" src="https://github-readme-streak-stats.herokuapp.com/?user=LokarajR&theme=tokyonight" alt="naveen-jayaraj streak" />
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=LokarajR&layout=compact&theme=tokyonight" alt="Top Languages" />
-</p>
-
-<p align="center">
-  <img src="https://leetcard.jacoblin.cool/AZF12FQrNh?theme=dark&font=Fira%20Code&ext=heatmap" alt="LeetCode Card" />
-</p>
-
+<table width="100%">
+  <tr>
+    <!-- LEFT COLUMN -->
+    <td width="62%" valign="top">
+      <!-- Profile card (shrunk by width) -->
+      <img
+        src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=LokarajR&theme=tokyonight"
+        width="100%"
+      />
+      <br/>
+      <!-- Language cards row -->
+      <table width="100%">
+        <tr>
+          <td width="50%" align="center">
+            <img
+              src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=LokarajR&theme=tokyonight"
+              width="95%"
+            />
+          </td>
+          <td width="50%" align="center">
+            <img
+              src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=LokarajR&theme=tokyonight"
+              width="95%"
+            />
+          </td>
+        </tr>
+      </table>
+    </td>
+    <!-- RIGHT COLUMN -->
+    <td width="38%" valign="top" align="center">
+      <img
+        src="https://leetcard.jacoblin.cool/AZF12FQrNh?theme=dark&font=Fira%20Code&ext=heatmap"
+      />
+    </td>
+  </tr>
+</table>
