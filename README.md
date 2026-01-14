@@ -64,3 +64,8 @@ I'm currently working on ML topics like NLP and Reinforcement Learning. I'm alwa
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=LokarajR&layout=compact&theme=tokyonight" alt="Top Languages" />
 </p>
+
+<p align="center">
+  <img src="https://leetcard.jacoblin.cool/LokarajR?theme=dark&font=Fira%20Code&ext=heatmap" alt="LeetCode Card" />
+</p>
+
