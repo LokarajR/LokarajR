@@ -3,7 +3,7 @@
 
 I'm a Machine Learning Engineering Under-Graduate student at **SRM Institute of Science and Technology**.
 
-I'm currently working on ML topics like NLP and Reinforcement Learning. I'm always working on new projects and am actively seeking opportunities to collaborate on open-source AI projects or research.
+I'm currently working on ML topics and actively seeking for internships. I'm always working on new projects and am actively seeking opportunities to collaborate on open-source AI projects or research.
 
 ---
 
