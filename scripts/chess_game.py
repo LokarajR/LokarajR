@@ -50,7 +50,7 @@ USER_RE = re.compile(r"^[A-Za-z0-9](?:[A-Za-z0-9-]{0,38})$")
 # ------------------------------------------------------------------ state
 
 def new_state(game: int = 1) -> dict:
-    return {"fen": chess.STARTING_FEN, "ply": 0, "last": None, "game": game, "players": {}}
+    return {"fen": chess.STARTING_FEN, "ply": 0, "last": None, "game": game, "players": {}, "captures": []}
 
 
 def players_of(state: dict) -> dict:
@@ -97,11 +97,17 @@ def apply_title(state: dict, title: str, user: str) -> tuple[dict | None, str]:
     if move not in board.legal_moves:
         return None, f"`{uci}` isn't a legal move in this position."
     san = board.san(move)
+    captures = list(state.get("captures", []))
+    if board.is_capture(move):
+        victim = (chess.Piece(chess.PAWN, not board.turn) if board.is_en_passant(move)
+                  else board.piece_at(move.to_square))
+        captures.append({"piece": piece_code(victim), "by": user, "san": san})
     board.push(move)
     players = players_of(state)
     players[user] = players.get(user, 0) + 1
     new = {"fen": board.fen(), "ply": state["ply"] + 1, "game": state.get("game", 1),
-           "last": {"uci": move.uci(), "san": san, "user": user}, "players": players}
+           "last": {"uci": move.uci(), "san": san, "user": user}, "players": players,
+           "captures": captures}
     return new, f"@{user} played **{san}**. Thanks for playing!"
 
 
@@ -141,7 +147,7 @@ CAP = 22
 def captured_svg(code: str) -> str:
     """A small piece with no square behind it, for the captured-pieces row."""
     style = ('fill="#ffffff" stroke="#1f1f1f" stroke-width="1" paint-order="stroke"'
-             if code[0] == "w" else 'fill="#1f1f1f" stroke="#8b949e" stroke-width="0.6" paint-order="stroke"')
+             if code[0] == "w" else 'fill="#1f1f1f" stroke="#c9d1d9" stroke-width="1.6" paint-order="stroke"')
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{CAP}" height="{CAP}" viewBox="0 0 {CAP} {CAP}">'
             f'<text x="11" y="18" text-anchor="middle" font-size="19" {style} '
             f'font-family="\'DejaVu Sans\', \'Segoe UI Symbol\', \'Apple Symbols\', \'Noto Sans Symbols 2\', serif">'
@@ -162,18 +168,6 @@ def write_images() -> int:
         n += 1
     return n
 
-
-START_COUNT = {"p": 8, "n": 2, "b": 2, "r": 2, "q": 1}
-
-
-def captured(board: chess.Board, colour: bool) -> list[str]:
-    """Pieces of `colour` no longer on the board, most valuable first.
-    A promotion can make a count go up; that is clamped at zero."""
-    out = []
-    for kind in "qrbnp":
-        missing = START_COUNT[kind] - len(board.pieces(chess.PIECE_SYMBOLS.index(kind), colour))
-        out += [("w" if colour else "b") + kind] * max(0, missing)
-    return out
 
 
 # ------------------------------------------------------------------ board html
@@ -250,8 +244,7 @@ def readme_block(state: dict) -> str:
 
 def side_block(state: dict) -> str:
     """Captured pieces and players, shown in the column beside the board."""
-    board = chess.Board(state["fen"])
-    return f"{SIDE_START}\n{captures_html(board, 'game/img/')}\n{players_html(state)}\n{SIDE_END}"
+    return f"{SIDE_START}\n{captures_html(state, 'game/img/')}\n{players_html(state)}\n{SIDE_END}"
 
 
 def replace_block(text: str, start: str, end: str, block: str) -> str:
@@ -262,14 +255,29 @@ def replace_block(text: str, start: str, end: str, block: str) -> str:
     return head + block + tail
 
 
-def captures_html(board: chess.Board, img_prefix: str) -> str:
-    def row(codes: list[str]) -> str:
-        if not codes:
+PER_ROW = 6
+
+
+def captures_html(state: dict, img_prefix: str) -> str:
+    """Each captured piece with the GitHub name of whoever captured it underneath."""
+    def grid(items: list[dict]) -> str:
+        if not items:
             return "<sub>none yet</sub>"
-        return "".join(f'<img src="{img_prefix}cap-{c}.svg" width="{CAP}" height="{CAP}" align="top" '
-                       f'alt="{"white" if c[0] == "w" else "black"} {NAME[c[1]]}">' for c in codes)
-    return (f"<p><sub><b>White captured</b></sub><br>{row(captured(board, chess.BLACK))}<br>"
-            f"<sub><b>Black captured</b></sub><br>{row(captured(board, chess.WHITE))}</p>")
+        rows = []
+        for i in range(0, len(items), PER_ROW):
+            cells = "".join(
+                f'<td align="center"><img src="{img_prefix}cap-{c["piece"]}.svg" width="{CAP}" '
+                f'height="{CAP}" alt="{"white" if c["piece"][0] == "w" else "black"} {NAME[c["piece"][1]]}">'
+                f'<br><sub><a href="https://github.com/{c["by"]}">@{c["by"]}</a></sub></td>'
+                for c in items[i:i + PER_ROW])
+            rows.append(f"<tr>{cells}</tr>")
+        return "<table>" + "".join(rows) + "</table>"
+
+    caps = state.get("captures", [])
+    by_white = [c for c in caps if c["piece"][0] == "b"]  # white took black pieces
+    by_black = [c for c in caps if c["piece"][0] == "w"]
+    return (f"<p><sub><b>White captured</b></sub></p>\n{grid(by_white)}\n"
+            f"<p><sub><b>Black captured</b></sub></p>\n{grid(by_black)}")
 
 
 def players_html(state: dict) -> str:

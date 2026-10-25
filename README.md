@@ -10,7 +10,7 @@
 
 <table>
 <tr>
-<td valign="top" width="55%">
+<td valign="top" width="380">
 
 <!-- CHESS:START -->
 <p><b>Black to move</b> · game 1, move 1 · last: <b>f4</b> by @LokarajR</p>
@@ -28,7 +28,7 @@
 <!-- CHESS:END -->
 
 </td>
-<td valign="top" width="45%">
+<td valign="top">
 
 <sub><b>My GitHub contributions, eaten by a snake</b></sub><br>
 <img src="https://raw.githubusercontent.com/LokarajR/LokarajR/output/github-snake-dark.svg" width="100%" alt="Snake animation eating the squares of my GitHub contribution graph">
@@ -37,7 +37,10 @@
 <a href="https://leetcode.com/u/AZF12FQrNh/"><img src="assets/leetcode-heatmap.svg" width="100%" alt="My LeetCode submissions over the last year as a heatmap"></a>
 
 <!-- CHESS-SIDE:START -->
-<p><sub><b>White captured</b></sub><br><sub>none yet</sub><br><sub><b>Black captured</b></sub><br><sub>none yet</sub></p>
+<p><sub><b>White captured</b></sub></p>
+<sub>none yet</sub>
+<p><sub><b>Black captured</b></sub></p>
+<sub>none yet</sub>
 <p><sub><b>Players</b></sub><br><a href="https://github.com/LokarajR">@LokarajR</a></p>
 <!-- CHESS-SIDE:END -->
 

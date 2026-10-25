@@ -27,7 +27,7 @@ BG, BORDER, TEXT, MUTED = "#0d1117", "#30363d", "#e6edf3", "#8b949e"
 LEVELS = ("#161b22", "#0e4429", "#006d32", "#26a641", "#39d353")
 MONO = "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
 SANS = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-CELL, STEP, LEFT, TOP = 11, 14, 36, 46
+CELL, STEP, LEFT, TOP = 11, 14, 30, 40
 MONTHS = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
 
 QUERY = ("query($u:String!){matchedUser(username:$u){userCalendar{submissionCalendar}}}")
@@ -68,8 +68,8 @@ def render(counts: dict[str, int], today: dt.date, username: str) -> str:
     peak = max(window.values(), default=0)
     total, active = sum(window.values()), sum(1 for v in window.values() if v)
     cols = (len(days) + 6) // 7
-    width = LEFT + cols * STEP + 16
-    height = TOP + 7 * STEP + 34
+    width = LEFT + cols * STEP + 8
+    height = TOP + 7 * STEP + 28
 
     out = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
            f'viewBox="0 0 {width} {height}" role="img" aria-label="LeetCode heatmap: {total} submissions '
@@ -77,7 +77,7 @@ def render(counts: dict[str, int], today: dt.date, username: str) -> str:
            f'<rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="8" fill="{BG}" stroke="{BORDER}"/>',
            f'<text x="{LEFT}" y="22" font-family="{SANS}" font-size="13" fill="{TEXT}">'
            f'<tspan font-weight="600">{total} LeetCode submissions</tspan> in the last year · {active} active days</text>',
-           f'<text x="{width - 14}" y="22" text-anchor="end" font-family="{MONO}" font-size="10" fill="{MUTED}">'
+           f'<text x="{width - 10}" y="22" text-anchor="end" font-family="{MONO}" font-size="10" fill="{MUTED}">'
            f'@{escape(username)}</text>']
     last_month = None
     for i, d in enumerate(days):
@@ -92,8 +92,8 @@ def render(counts: dict[str, int], today: dt.date, username: str) -> str:
     for row, name in ((1, "Mon"), (3, "Wed"), (5, "Fri")):
         out.append(f'<text x="8" y="{TOP + row * STEP + 9}" font-family="{SANS}" font-size="10" '
                    f'fill="{MUTED}">{name}</text>')
-    y = TOP + 7 * STEP + 18
-    legend_x = width - 16 - 5 * STEP - 34
+    y = TOP + 7 * STEP + 8
+    legend_x = width - 8 - 5 * STEP - 30
     out.append(f'<text x="{legend_x - 6}" y="{y + 9}" text-anchor="end" font-family="{SANS}" font-size="10" '
                f'fill="{MUTED}">Less</text>')
     for k, colour in enumerate(LEVELS):

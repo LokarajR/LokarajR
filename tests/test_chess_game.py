@@ -68,11 +68,25 @@ class CapturesAndPlayers(unittest.TestCase):
     def test_new_game_clears_players(self):
         self.assertEqual(g.new_state(2)["players"], {})
 
-    def test_captured_pieces(self):
-        board = chess.Board("rnbqkbnr/ppp1pppp/8/8/8/8/PPP1PPPP/RNB1KBNR w KQkq - 0 1")
-        self.assertEqual(g.captured(board, chess.WHITE), ["wq", "wp"])
-        self.assertEqual(g.captured(board, chess.BLACK), ["bp"])
-        self.assertEqual(g.captured(chess.Board(), chess.WHITE), [])
+    def test_captures_record_piece_and_capturer(self):
+        s = g.new_state()
+        for i, (mv, who) in enumerate([("e2e4", "alice"), ("d7d5", "bob"), ("e4d5", "carol"), ("d8d5", "dave")]):
+            s, _ = g.apply_title(s, f"chess|move|{mv}|{i}", who)
+        self.assertEqual([(c["piece"], c["by"]) for c in s["captures"]], [("bp", "carol"), ("wp", "dave")])
+        html = g.captures_html(s, "game/img/")
+        white_part, black_part = html.split("Black captured")
+        self.assertIn("cap-bp.svg", white_part)
+        self.assertIn("@carol", white_part)
+        self.assertIn("@dave", black_part)
+        self.assertLess(html.index("cap-bp.svg"), html.index("@carol"))  # name under the piece
+
+    def test_en_passant_capture_is_a_pawn(self):
+        s = {"fen": "4k3/8/8/3pP3/8/8/8/4K3 w - d6 0 1", "ply": 0, "last": None, "game": 1}
+        new, _ = g.apply_title(s, "chess|move|e5d6|0", "erin")
+        self.assertEqual(new["captures"], [{"piece": "bp", "by": "erin", "san": "exd6"}])
+
+    def test_no_captures_yet(self):
+        self.assertEqual(g.captures_html(g.new_state(), "game/img/").count("none yet"), 2)
 
     def test_side_block_is_separate_from_board(self):
         s = g.new_state()
