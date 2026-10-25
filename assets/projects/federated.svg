@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240" role="img" aria-label="Federated Learning: three clients keep their data locked and send clipped, noise-added gradients to a FedAvg server">
+<title>Federated Learning</title>
+<rect x="0.5" y="0.5" width="399" height="239" rx="16" fill="#0d1117" stroke="#30363d"/>
+<rect x="0.5" y="0.5" width="6" height="239" rx="3" fill="#39c5cf"/>
+<text x="22" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#e6edf3">Federated Learning</text>
+<text x="380" y="32" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#39c5cf">PRIVACY</text>
+
+<circle cx="200" cy="125" r="30" fill="#161b22" stroke="#39c5cf" stroke-width="2"/>
+<text x="200" y="122" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9" fill="#e6edf3">FedAvg</text>
+<text x="200" y="134" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9" fill="#8b949e">server</text>
+<rect x="44" y="60" width="52" height="40" rx="6" fill="#161b22" stroke="#30363d"/>
+<text x="70" y="76" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="8" fill="#8b949e">client 1</text>
+<text x="70" y="90" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="8" fill="#39c5cf">🔒 data</text>
+<path d="M70 80L200 125" stroke="#30363d" stroke-dasharray="3 4"/>
+<circle r="4" fill="#39c5cf"><animateMotion dur="2.2s" begin="0.0s" repeatCount="indefinite" path="M70 80L200 125"/></circle>
+<circle r="2" fill="#f85149" opacity="0.8"><animateMotion dur="2.2s" begin="0.0s" repeatCount="indefinite" path="M74 75L204 119"/></circle>
+<rect x="44" y="150" width="52" height="40" rx="6" fill="#161b22" stroke="#30363d"/>
+<text x="70" y="166" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="8" fill="#8b949e">client 2</text>
+<text x="70" y="180" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="8" fill="#39c5cf">🔒 data</text>
+<path d="M70 170L200 125" stroke="#30363d" stroke-dasharray="3 4"/>
+<circle r="4" fill="#39c5cf"><animateMotion dur="2.2s" begin="0.5s" repeatCount="indefinite" path="M70 170L200 125"/></circle>
+<circle r="2" fill="#f85149" opacity="0.8"><animateMotion dur="2.2s" begin="0.5s" repeatCount="indefinite" path="M74 165L204 119"/></circle>
+<rect x="304" y="105" width="52" height="40" rx="6" fill="#161b22" stroke="#30363d"/>
+<text x="330" y="121" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="8" fill="#8b949e">client 3</text>
+<text x="330" y="135" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="8" fill="#39c5cf">🔒 data</text>
+<path d="M330 125L200 125" stroke="#30363d" stroke-dasharray="3 4"/>
+<circle r="4" fill="#39c5cf"><animateMotion dur="2.2s" begin="1.0s" repeatCount="indefinite" path="M330 125L200 125"/></circle>
+<circle r="2" fill="#f85149" opacity="0.8"><animateMotion dur="2.2s" begin="1.0s" repeatCount="indefinite" path="M334 120L204 119"/></circle><text x="236" y="190" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9" fill="#f85149">● DP noise added</text><text x="236" y="204" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9" fill="#39c5cf">● clipped gradients</text>
+<text x="22" y="224" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#8b949e">only noised updates leave the client</text>
+</svg>

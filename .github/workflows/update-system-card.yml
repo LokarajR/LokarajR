@@ -1,0 +1,49 @@
+name: Update system card
+
+on:
+  schedule:
+    - cron: "17 3 * * *" # daily, 03:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write # only to commit the regenerated SVGs
+
+concurrency:
+  group: system-card
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+
+      - run: python -m pip install -r requirements.txt
+
+      # The generator is tested before it is allowed to touch the README assets.
+      - name: Test generator
+        run: python -m unittest discover -s tests -v
+
+      # On an API failure the script exits non-zero and writes nothing,
+      # so the previously committed card stays in place.
+      - name: Generate system card
+        run: python scripts/generate_svgs.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit only if the card changed
+        run: |
+          if git diff --quiet -- assets/; then
+            echo "System card unchanged; nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/system-card-dark.svg assets/system-card-light.svg
+          git commit -m "chore: refresh system card"
+          git push

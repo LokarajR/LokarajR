@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="320" viewBox="0 0 840 320" role="img" aria-labelledby="card-title card-desc">
+<title id="card-title">LokarajR system card</title>
+<desc id="card-desc">Featured projects with their engineering area, last update and continuous-integration status, generated from the GitHub API.</desc>
+<rect x="0.5" y="0.5" width="839" height="319" rx="12" fill="#0d1117" stroke="#30363d" />
+<path d="M0.5 12.5a12 12 0 0 1 12-12h815a12 12 0 0 1 12 12V36H0.5z" fill="#161b22" />
+<path d="M0 36H840" stroke="#30363d" />
+<circle cx="22" cy="18" r="5.5" fill="#ff5f57" />
+<circle cx="40" cy="18" r="5.5" fill="#febc2e" />
+<circle cx="58" cy="18" r="5.5" fill="#28c840" />
+<text x="420" y="23" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#8b949e">LokarajR — system card</text>
+<text x="28" y="70" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#58a6ff">$ status --featured</text>
+<text x="28" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#e6edf3">Build it. Test it. Ship it.</text>
+<g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#8b949e" letter-spacing="1"><text x="28" y="124">AREA</text><text x="170" y="124">PROJECT</text><text x="520" y="124">UPDATED</text><text x="660" y="124">CI</text></g>
+<path d="M28 131.5H812" stroke="#30363d" />
+<circle cx="33" cy="150" r="4" fill="#a371f7" />
+<text x="46" y="154" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#8b949e">Vision</text>
+<text x="170" y="154" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#e6edf3">Distracted Driver Detection</text>
+<text x="520" y="154" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#8b949e">Oct 2026</text>
+<text x="660" y="154" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#8b949e">—</text>
+<path d="M28 166.5H812" stroke="#1b222c" />
+<circle cx="33" cy="184" r="4" fill="#58a6ff" />
+<text x="46" y="188" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#8b949e">Retrieval</text>
+<text x="170" y="188" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#e6edf3">Hybrid RAG Pipeline</text>
+<text x="520" y="188" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#8b949e">Sep 2026</text>
+<text x="660" y="188" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#3fb950">✓ passing</text>
+<path d="M28 200.5H812" stroke="#1b222c" />
+<circle cx="33" cy="218" r="4" fill="#58a6ff" />
+<text x="46" y="222" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#8b949e">Retrieval</text>
+<text x="170" y="222" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#e6edf3">Private Docs RAG</text>
+<text x="520" y="222" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#8b949e">Sep 2026</text>
+<text x="660" y="222" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#8b949e">—</text>
+<path d="M28 234.5H812" stroke="#1b222c" />
+<circle cx="33" cy="252" r="4" fill="#3fb950" />
+<text x="46" y="256" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#8b949e">Reliability</text>
+<text x="170" y="256" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#e6edf3">Raze</text>
+<text x="520" y="256" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#8b949e">Aug 2026</text>
+<text x="660" y="256" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#8b949e">—</text>
+<path d="M0 284H840" stroke="#30363d" />
+<text x="28" y="306" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#8b949e">latest public activity: 2026-10-23</text>
+<text x="812" y="306" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#8b949e">generated daily from the GitHub API</text>
+</svg>

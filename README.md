@@ -1,76 +1,68 @@
-# Lokaraj R
-**`Machine Learning Engineer & Student @ SRMIST`**
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
+  <img src="assets/header-light.svg" width="100%" alt="Lokaraj R — AI/ML engineering. AI systems should do more than produce outputs. They should earn trust.">
+</picture>
 
-I'm a Machine Learning Engineering Under-Graduate student at **SRM Institute of Science and Technology**.
+<p align="center"><b>B.Tech CSE (AI & ML) @ SRMIST</b> · open to <b>ML / AI engineering internships</b><br>
+<samp><a href="Resume.pdf">résumé</a> · <a href="https://lokarajr.github.io/Portfolio/">portfolio</a> · <a href="https://www.linkedin.com/in/lokarajr/">linkedin</a></samp></p>
 
-I'm currently working on ML topics and actively seeking for internships. I'm always working on new projects and am actively seeking opportunities to collaborate on open-source AI projects or research.
+## ♟ Play me: community chess
 
----
-
-
-<p align="left">
-  <a href="https://github.com/LokarajR" target="_blank">
-    <img src="https://img.shields.io/github/followers/LokarajR?style=for-the-badge&logo=github&label=Follow&color=blue" alt="GitHub Followers"/>
-  </a>
-  <img src="https://komarev.com/ghpvc/?username=LokarajR&label=Profile%20Views&color=blue&style=for-the-badge&logo=eye" alt="Profile Views" />
-  </a>
-  <a href="https://www.linkedin.com/in/lokarajr/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-  </a>
-  <a href="[Portfolio/Blog URL]" target="_blank">
-    <img src="https://img.shields.io/badge/Portfolio-website-blue?style=for-the-badge&logo=lighttpd&color=green" alt="Portfolio"/> 
-  </p>
-
----
-
-## **Languages and Tools**
-<div align="center">
-<a href="https://code.visualstudio.com/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" width="40"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://www.python.org" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="40"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://www.java.com" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" width="40"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://tensorflow.org" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tensorflow/tensorflow-original.svg" width="40"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://pytorch.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pytorch/pytorch-original.svg" width="40"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://isocpp.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" width="40"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://jupyter.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jupyter/jupyter-original-wordmark.svg" width="40"/></a>
-</div>
-
-## **Stats**
-
+<!-- CHESS:START -->
+<p align="center"><b>White to move</b> · game 1, move 1</p>
 <p align="center">
-  <img
-    src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=LokarajR&theme=tokyonight"
-    width="100%"
-  />
+<img src="game/img/br-l-n.svg" width="44" height="44" align="top" alt="a8 black rook"><img src="game/img/bn-d-n.svg" width="44" height="44" align="top" alt="b8 black knight"><img src="game/img/bb-l-n.svg" width="44" height="44" align="top" alt="c8 black bishop"><img src="game/img/bq-d-n.svg" width="44" height="44" align="top" alt="d8 black queen"><img src="game/img/bk-l-n.svg" width="44" height="44" align="top" alt="e8 black king"><img src="game/img/bb-d-n.svg" width="44" height="44" align="top" alt="f8 black bishop"><img src="game/img/bn-l-n.svg" width="44" height="44" align="top" alt="g8 black knight"><img src="game/img/br-d-n.svg" width="44" height="44" align="top" alt="h8 black rook"><br>
+<img src="game/img/bp-d-n.svg" width="44" height="44" align="top" alt="a7 black pawn"><img src="game/img/bp-l-n.svg" width="44" height="44" align="top" alt="b7 black pawn"><img src="game/img/bp-d-n.svg" width="44" height="44" align="top" alt="c7 black pawn"><img src="game/img/bp-l-n.svg" width="44" height="44" align="top" alt="d7 black pawn"><img src="game/img/bp-d-n.svg" width="44" height="44" align="top" alt="e7 black pawn"><img src="game/img/bp-l-n.svg" width="44" height="44" align="top" alt="f7 black pawn"><img src="game/img/bp-d-n.svg" width="44" height="44" align="top" alt="g7 black pawn"><img src="game/img/bp-l-n.svg" width="44" height="44" align="top" alt="h7 black pawn"><br>
+<img src="game/img/x-l-n.svg" width="44" height="44" align="top" alt="a6 empty"><img src="game/img/x-d-n.svg" width="44" height="44" align="top" alt="b6 empty"><img src="game/img/x-l-n.svg" width="44" height="44" align="top" alt="c6 empty"><img src="game/img/x-d-n.svg" width="44" height="44" align="top" alt="d6 empty"><img src="game/img/x-l-n.svg" width="44" height="44" align="top" alt="e6 empty"><img src="game/img/x-d-n.svg" width="44" height="44" align="top" alt="f6 empty"><img src="game/img/x-l-n.svg" width="44" height="44" align="top" alt="g6 empty"><img src="game/img/x-d-n.svg" width="44" height="44" align="top" alt="h6 empty"><br>
+<img src="game/img/x-d-n.svg" width="44" height="44" align="top" alt="a5 empty"><img src="game/img/x-l-n.svg" width="44" height="44" align="top" alt="b5 empty"><img src="game/img/x-d-n.svg" width="44" height="44" align="top" alt="c5 empty"><img src="game/img/x-l-n.svg" width="44" height="44" align="top" alt="d5 empty"><img src="game/img/x-d-n.svg" width="44" height="44" align="top" alt="e5 empty"><img src="game/img/x-l-n.svg" width="44" height="44" align="top" alt="f5 empty"><img src="game/img/x-d-n.svg" width="44" height="44" align="top" alt="g5 empty"><img src="game/img/x-l-n.svg" width="44" height="44" align="top" alt="h5 empty"><br>
+<img src="game/img/x-l-n.svg" width="44" height="44" align="top" alt="a4 empty"><img src="game/img/x-d-n.svg" width="44" height="44" align="top" alt="b4 empty"><img src="game/img/x-l-n.svg" width="44" height="44" align="top" alt="c4 empty"><img src="game/img/x-d-n.svg" width="44" height="44" align="top" alt="d4 empty"><img src="game/img/x-l-n.svg" width="44" height="44" align="top" alt="e4 empty"><img src="game/img/x-d-n.svg" width="44" height="44" align="top" alt="f4 empty"><img src="game/img/x-l-n.svg" width="44" height="44" align="top" alt="g4 empty"><img src="game/img/x-d-n.svg" width="44" height="44" align="top" alt="h4 empty"><br>
+<img src="game/img/x-d-n.svg" width="44" height="44" align="top" alt="a3 empty"><img src="game/img/x-l-n.svg" width="44" height="44" align="top" alt="b3 empty"><img src="game/img/x-d-n.svg" width="44" height="44" align="top" alt="c3 empty"><img src="game/img/x-l-n.svg" width="44" height="44" align="top" alt="d3 empty"><img src="game/img/x-d-n.svg" width="44" height="44" align="top" alt="e3 empty"><img src="game/img/x-l-n.svg" width="44" height="44" align="top" alt="f3 empty"><img src="game/img/x-d-n.svg" width="44" height="44" align="top" alt="g3 empty"><img src="game/img/x-l-n.svg" width="44" height="44" align="top" alt="h3 empty"><br>
+<a href="game/select/a2.md"><img src="game/img/wp-l-n.svg" width="44" height="44" align="top" alt="a2 white pawn"></a><a href="game/select/b2.md"><img src="game/img/wp-d-n.svg" width="44" height="44" align="top" alt="b2 white pawn"></a><a href="game/select/c2.md"><img src="game/img/wp-l-n.svg" width="44" height="44" align="top" alt="c2 white pawn"></a><a href="game/select/d2.md"><img src="game/img/wp-d-n.svg" width="44" height="44" align="top" alt="d2 white pawn"></a><a href="game/select/e2.md"><img src="game/img/wp-l-n.svg" width="44" height="44" align="top" alt="e2 white pawn"></a><a href="game/select/f2.md"><img src="game/img/wp-d-n.svg" width="44" height="44" align="top" alt="f2 white pawn"></a><a href="game/select/g2.md"><img src="game/img/wp-l-n.svg" width="44" height="44" align="top" alt="g2 white pawn"></a><a href="game/select/h2.md"><img src="game/img/wp-d-n.svg" width="44" height="44" align="top" alt="h2 white pawn"></a><br>
+<img src="game/img/wr-d-n.svg" width="44" height="44" align="top" alt="a1 white rook"><a href="game/select/b1.md"><img src="game/img/wn-l-n.svg" width="44" height="44" align="top" alt="b1 white knight"></a><img src="game/img/wb-d-n.svg" width="44" height="44" align="top" alt="c1 white bishop"><img src="game/img/wq-l-n.svg" width="44" height="44" align="top" alt="d1 white queen"><img src="game/img/wk-d-n.svg" width="44" height="44" align="top" alt="e1 white king"><img src="game/img/wb-l-n.svg" width="44" height="44" align="top" alt="f1 white bishop"><a href="game/select/g1.md"><img src="game/img/wn-d-n.svg" width="44" height="44" align="top" alt="g1 white knight"></a><img src="game/img/wr-l-n.svg" width="44" height="44" align="top" alt="h1 white rook">
 </p>
-<table width="100%">
-  <tr>
-    <!-- Top Languages by Repo -->
-    <td width="33%" align="center">
-      <img
-        src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=LokarajR&theme=tokyonight"
-        width="90%"
-      />
-    </td>
-    <!-- Top Languages by Commit -->
-    <td width="33%" align="center">
-      <img
-        src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=LokarajR&theme=tokyonight"
-        width="90%"
-      />
-    </td>
-    <!-- LeetCode -->
-    <td width="34%" align="center">
-      <img
-        src="https://leetcard.jacoblin.cool/AZF12FQrNh?theme=dark&font=Fira%20Code&ext=heatmap"
-        width="90%"
-      />
-    </td>
-  </tr>
+<p align="center"><sub>Click a white piece, then click where it should go. Anyone can play: each move is a GitHub issue, checked for legality by <a href="scripts/chess_game.py">a workflow</a>.</sub></p>
+<!-- CHESS:END -->
+
+## What I've built
+
+<sub>Each picture acts out what the project does. Click one to open the repo.</sub>
+
+<table>
+<tr>
+<td width="50%"><a href="https://github.com/LokarajR/Distracted-Driver-Detection-PS48"><img src="assets/projects/driver.svg" width="100%" alt="Distracted Driver Detection: a camera classifies a driver texting; drivers are split so none is shared between train, validation and test; 0.90 macro F1 on unseen drivers."></a></td>
+<td width="50%"><a href="https://github.com/LokarajR/Hybrid-RAG-pipeline"><img src="assets/projects/hybrid-rag.svg" width="100%" alt="Hybrid RAG: five sources flow into an NLI verifier that flags two sources disagreeing; the answer warns about the conflict."></a></td>
+</tr>
+<tr>
+<td width="50%"><a href="https://github.com/LokarajR/Private-Docs-RAG"><img src="assets/projects/private-docs-rag.svg" width="100%" alt="Private Docs RAG: a laptop searches its own files with no network and cites page 14."></a></td>
+<td width="50%"><a href="https://github.com/LokarajR/Raze"><img src="assets/projects/raze.svg" width="100%" alt="Raze: duplicate, delayed and lost payment webhooks pass through a dedupe-and-reconcile shield; the order becomes paid exactly once."></a></td>
+</tr>
+<tr>
+<td width="50%"><a href="https://github.com/LokarajR/Cloud-Native---Video-Surveillance-system"><img src="assets/projects/surveillance.svg" width="100%" alt="Cloud surveillance: a camera records on motion, the clip goes through Google Cloud, a person is detected and an email alert is sent."></a></td>
+<td width="50%"><a href="https://github.com/LokarajR/privacy_ai_federated"><img src="assets/projects/federated.svg" width="100%" alt="Federated learning: three clients keep data locked and send clipped, noise-added gradients to a FedAvg server."></a></td>
+</tr>
+<tr>
+<td width="50%"><a href="https://github.com/LokarajR/truthlens-fake-news-detector"><img src="assets/projects/truthlens.svg" width="100%" alt="TruthLens: a magnifying glass scans an article, a likely-fake stamp appears and LLaMA 3 explains why."></a></td>
+<td width="50%"><a href="https://github.com/LokarajR/AST-Based-Structural-Similarity-Analysis-for-GPL-Compliance-Detection"><img src="assets/projects/ast.svg" width="100%" alt="AST similarity: two syntax trees are compared node by node and a similarity bar fills to flag possible GPL reuse."></a></td>
+</tr>
 </table>
-<p align="center">
-  <img
-    src="https://github.com/LokarajR/LokarajR/blob/output/github-snake-dark.svg"
-    alt="github contribution snake"
-  />
-</p>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/system-card-dark.svg">
+  <img src="assets/system-card-light.svg" width="100%" alt="System card: featured projects, when each was last updated and whether its CI is passing. Regenerated daily from the GitHub API.">
+</picture>
+
+<details>
+<summary><b>Proof: the numbers behind the pictures</b></summary>
+
+<br>
+
+| Project | Result | Source |
+|---|---|---|
+| Distracted Driver | **0.90** macro F1 on unseen drivers, vs **0.99** on a leaky random split | [`results.json`](https://github.com/LokarajR/Distracted-Driver-Detection-PS48/blob/main/outputs/results.json) |
+| Private Docs RAG | keyword and figure questions rank **#1** up to 1,003 docs; **10k files** ingested in **78 s** | [`EVAL.md`](https://github.com/LokarajR/Private-Docs-RAG/blob/master/docs/EVAL.md) · [`SCALE.md`](https://github.com/LokarajR/Private-Docs-RAG/blob/master/docs/SCALE.md) |
+| Hybrid RAG | conflict precision **5/6** (hand-labelled); CI passing | [README](https://github.com/LokarajR/Hybrid-RAG-pipeline#status) |
+| Raze | demo: unprotected **1/5**, protected **5/5** | [README §9](https://github.com/LokarajR/Raze#9-evidence-you-can-re-run) |
+
+</details>
+
+<p align="center"><samp>PyTorch · sentence-transformers · Qdrant · FastAPI · Node.js · PostgreSQL · Docker · GCP</samp></p>

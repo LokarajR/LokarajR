@@ -1,0 +1,77 @@
+import sys
+import unittest
+import xml.etree.ElementTree as ET
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
+import chess  # noqa: E402
+import chess_game as g  # noqa: E402
+
+
+class Moves(unittest.TestCase):
+    def setUp(self):
+        self.start = g.new_state()
+
+    def test_legal_move_is_applied(self):
+        new, msg = g.apply_title(self.start, "chess|move|e2e4|0", "alice")
+        self.assertEqual(new["ply"], 1)
+        self.assertEqual(new["last"], {"uci": "e2e4", "san": "e4", "user": "alice"})
+        self.assertIn("@alice played **e4**", msg)
+
+    def test_illegal_move_is_rejected(self):
+        new, msg = g.apply_title(self.start, "chess|move|e2e5|0", "alice")
+        self.assertIsNone(new)
+        self.assertIn("isn't a legal move", msg)
+
+    def test_stale_link_is_rejected(self):
+        new, msg = g.apply_title(self.start, "chess|move|e2e4|3", "alice")
+        self.assertIsNone(new)
+        self.assertIn("board changed", msg)
+
+    def test_garbage_titles_are_rejected(self):
+        for title in ("", "hello", "chess|move|e2e4", "chess|move|e2e4|0; rm -rf /", "chess|move|z9z9|0"):
+            self.assertIsNone(g.apply_title(self.start, title, "alice")[0], title)
+
+    def test_bad_username_is_not_echoed(self):
+        _, msg = g.apply_title(self.start, "chess|move|e2e4|0", "<script>")
+        self.assertIn("@someone", msg)
+
+    def test_promotion_defaults_to_queen(self):
+        state = {"fen": "8/P7/8/8/8/8/8/k6K w - - 0 1", "ply": 5, "last": None, "game": 1}
+        new, _ = g.apply_title(state, "chess|move|a7a8|5", "bob")
+        self.assertEqual(chess.Board(new["fen"]).piece_at(chess.A8).symbol(), "Q")
+
+    def test_new_game_only_when_over(self):
+        self.assertIsNone(g.apply_title(self.start, "chess|new", "bob")[0])
+        mate = {"fen": "rnb1kbnr/pppp1ppp/8/4p3/6Pq/5P2/PPPPP2P/RNBQKBNR w KQkq - 1 3",
+                "ply": 4, "last": None, "game": 2}
+        new, _ = g.apply_title(mate, "chess|new", "bob")
+        self.assertEqual((new["fen"], new["ply"], new["game"]), (chess.STARTING_FEN, 0, 3))
+
+
+class Rendering(unittest.TestCase):
+    def test_every_square_image_is_valid_svg(self):
+        for code in ["x", "wk", "bp"]:
+            for shade in "ld":
+                for mark in g.MARKS:
+                    ET.fromstring(g.square_svg(code, shade, mark))
+
+    def test_start_board_links_only_movable_white_pieces(self):
+        html = g.board_html(g.new_state(), "game/img/", "game/select/")
+        self.assertEqual(html.count("<img "), 64)
+        self.assertEqual(html.count('href="game/select/'), 10)  # 8 pawns + 2 knights
+        self.assertIn('href="game/select/e2.md"', html)
+        self.assertNotIn('href="game/select/e1.md"', html)  # king is blocked
+
+    def test_select_page_links_targets_to_issues(self):
+        page = g.select_page(g.new_state(), chess.E2)
+        self.assertEqual(page.count("issues/new?title=chess%7Cmove%7Ce2e"), 2)  # e3, e4
+        self.assertIn("chess%7Cmove%7Ce2e4%7C0", page)
+
+    def test_board_is_deterministic(self):
+        s = g.new_state()
+        self.assertEqual(g.readme_block(s), g.readme_block(s))
+
+
+if __name__ == "__main__":
+    unittest.main()

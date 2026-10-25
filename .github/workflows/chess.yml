@@ -1,0 +1,66 @@
+name: Chess move
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write # commit the new board
+  issues: write # reply to and close the move issue
+
+# Moves are applied one at a time, in order.
+concurrency:
+  group: chess
+  cancel-in-progress: false
+
+jobs:
+  move:
+    if: startsWith(github.event.issue.title, 'chess|')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+
+      - run: python -m pip install -r requirements.txt
+
+      # The title comes from an untrusted user, so it is passed through env,
+      # never interpolated into the script, and parsed with a strict regex.
+      - name: Apply move
+        id: move
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_USER: ${{ github.event.issue.user.login }}
+          CHESS_MESSAGE_FILE: ${{ runner.temp }}/chess-message.md
+        run: |
+          if python scripts/chess_game.py move; then
+            echo "applied=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "applied=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit the new board
+        if: steps.move.outputs.applied == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md game/
+          git commit -m "chess: move by @${ISSUE_USER}"
+          git push
+        env:
+          ISSUE_USER: ${{ github.event.issue.user.login }}
+
+      - name: Reply and close the issue
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE: ${{ github.event.issue.number }}
+          MESSAGE_FILE: ${{ runner.temp }}/chess-message.md
+        run: |
+          [ -f "$MESSAGE_FILE" ] || echo "Something went wrong processing this move." > "$MESSAGE_FILE"
+          printf '\n\n[Back to the board](https://github.com/%s)\n' "$GITHUB_REPOSITORY_OWNER" >> "$MESSAGE_FILE"
+          gh issue comment "$ISSUE" --repo "$GITHUB_REPOSITORY" --body-file "$MESSAGE_FILE"
+          gh issue close "$ISSUE" --repo "$GITHUB_REPOSITORY"

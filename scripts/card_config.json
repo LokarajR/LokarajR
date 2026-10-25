@@ -1,0 +1,10 @@
+{
+  "owner": "LokarajR",
+  "thesis": "Build it. Test it. Ship it.",
+  "featured": [
+    {"repo": "Distracted-Driver-Detection-PS48", "label": "Distracted Driver Detection", "pillar": "Vision"},
+    {"repo": "Hybrid-RAG-pipeline", "label": "Hybrid RAG Pipeline", "pillar": "Retrieval"},
+    {"repo": "Private-Docs-RAG", "label": "Private Docs RAG", "pillar": "Retrieval"},
+    {"repo": "Raze", "label": "Raze", "pillar": "Reliability"}
+  ]
+}

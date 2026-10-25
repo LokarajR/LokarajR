@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240" role="img" aria-label="Private Docs RAG: a laptop scanning its own documents with no network connection and returning a citation to page 14">
+<title>Private Docs RAG</title>
+<rect x="0.5" y="0.5" width="399" height="239" rx="16" fill="#0d1117" stroke="#30363d"/>
+<rect x="0.5" y="0.5" width="6" height="239" rx="3" fill="#3fb950"/>
+<text x="22" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#e6edf3">Private Docs RAG</text>
+<text x="380" y="32" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#3fb950">OFFLINE RETRIEVAL</text>
+
+<rect x="40" y="58" width="190" height="120" rx="8" fill="#161b22" stroke="#30363d"/>
+<path d="M24 184h222l-14 12H38z" fill="#30363d"/>
+<rect x="58" y="74" width="26" height="32" rx="3" fill="#161b22" stroke="#8b949e"/><path d="M63 82h16" stroke="#8b949e" stroke-width="1.5"/><path d="M63 89h16" stroke="#8b949e" stroke-width="1.5"/><path d="M63 96h16" stroke="#8b949e" stroke-width="1.5"/><rect x="92" y="74" width="26" height="32" rx="3" fill="#161b22" stroke="#8b949e"/><path d="M97 82h16" stroke="#8b949e" stroke-width="1.5"/><path d="M97 89h16" stroke="#8b949e" stroke-width="1.5"/><path d="M97 96h16" stroke="#8b949e" stroke-width="1.5"/><rect x="126" y="74" width="26" height="32" rx="3" fill="#161b22" stroke="#8b949e"/><path d="M131 82h16" stroke="#8b949e" stroke-width="1.5"/><path d="M131 89h16" stroke="#8b949e" stroke-width="1.5"/><path d="M131 96h16" stroke="#8b949e" stroke-width="1.5"/><rect x="160" y="74" width="26" height="32" rx="3" fill="#161b22" stroke="#8b949e"/><path d="M165 82h16" stroke="#8b949e" stroke-width="1.5"/><path d="M165 89h16" stroke="#8b949e" stroke-width="1.5"/><path d="M165 96h16" stroke="#8b949e" stroke-width="1.5"/><rect x="192" y="74" width="24" height="32" rx="3" fill="#161b22" stroke="#8b949e"/><path d="M197 82h14" stroke="#8b949e" stroke-width="1.5"/><path d="M197 89h14" stroke="#8b949e" stroke-width="1.5"/><path d="M197 96h14" stroke="#8b949e" stroke-width="1.5"/>
+<rect x="58" y="120" width="26" height="32" rx="3" fill="#161b22" stroke="#8b949e"/><path d="M63 128h16" stroke="#8b949e" stroke-width="1.5"/><path d="M63 135h16" stroke="#8b949e" stroke-width="1.5"/><path d="M63 142h16" stroke="#8b949e" stroke-width="1.5"/><rect x="92" y="120" width="26" height="32" rx="3" fill="#161b22" stroke="#8b949e"/><path d="M97 128h16" stroke="#8b949e" stroke-width="1.5"/><path d="M97 135h16" stroke="#8b949e" stroke-width="1.5"/><path d="M97 142h16" stroke="#8b949e" stroke-width="1.5"/><rect x="126" y="120" width="26" height="32" rx="3" fill="#161b22" stroke="#3fb950"/><path d="M131 128h16" stroke="#3fb950" stroke-width="1.5"/><path d="M131 135h16" stroke="#3fb950" stroke-width="1.5"/><path d="M131 142h16" stroke="#3fb950" stroke-width="1.5"/><rect x="160" y="120" width="26" height="32" rx="3" fill="#161b22" stroke="#8b949e"/><path d="M165 128h16" stroke="#8b949e" stroke-width="1.5"/><path d="M165 135h16" stroke="#8b949e" stroke-width="1.5"/><path d="M165 142h16" stroke="#8b949e" stroke-width="1.5"/>
+<rect x="54" y="70" width="34" height="40" rx="4" fill="none" stroke="#3fb950" stroke-width="2">
+  <animate attributeName="x" values="54;88;122;156;122" dur="4s" repeatCount="indefinite"/>
+  <animate attributeName="y" values="70;70;70;70;116" dur="4s" repeatCount="indefinite"/></rect>
+<text x="122" y="172" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9" fill="#3fb950">p.14<animate attributeName="opacity" values="0;0;0;0;1" dur="4s" calcMode="discrete" repeatCount="indefinite"/></text>
+<g transform="translate(274 66)">
+  <path d="M0 18a34 34 0 0 1 48 0M8 26a22 22 0 0 1 32 0M16 34a10 10 0 0 1 16 0" fill="none" stroke="#8b949e" stroke-width="3" stroke-linecap="round"/>
+  <path d="M-4 -2L52 46" stroke="#f85149" stroke-width="3" stroke-linecap="round"/>
+</g>
+<text x="298" y="128" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">no network</text>
+<rect x="282" y="152" width="32" height="24" rx="4" fill="#3fb950"/>
+<path d="M288 152v-7a10 10 0 0 1 20 0v7" fill="none" stroke="#3fb950" stroke-width="3"/>
+<text x="298" y="190" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">your files stay</text>
+<text x="22" y="224" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#8b949e">every answer cites page, slide or cell</text>
+</svg>
