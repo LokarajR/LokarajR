@@ -49,7 +49,15 @@ USER_RE = re.compile(r"^[A-Za-z0-9](?:[A-Za-z0-9-]{0,38})$")
 # ------------------------------------------------------------------ state
 
 def new_state(game: int = 1) -> dict:
-    return {"fen": chess.STARTING_FEN, "ply": 0, "last": None, "game": game}
+    return {"fen": chess.STARTING_FEN, "ply": 0, "last": None, "game": game, "players": {}}
+
+
+def players_of(state: dict) -> dict:
+    """Moves per player. Games started before this was tracked fall back to the last mover."""
+    if "players" in state:
+        return dict(state["players"])
+    last = state.get("last")
+    return {last["user"]: 1} if last else {}
 
 
 def load_state() -> dict:
@@ -89,8 +97,10 @@ def apply_title(state: dict, title: str, user: str) -> tuple[dict | None, str]:
         return None, f"`{uci}` isn't a legal move in this position."
     san = board.san(move)
     board.push(move)
+    players = players_of(state)
+    players[user] = players.get(user, 0) + 1
     new = {"fen": board.fen(), "ply": state["ply"] + 1, "game": state.get("game", 1),
-           "last": {"uci": move.uci(), "san": san, "user": user}}
+           "last": {"uci": move.uci(), "san": san, "user": user}, "players": players}
     return new, f"@{user} played **{san}**. Thanks for playing!"
 
 
@@ -124,16 +134,45 @@ def image_name(code: str, shade: str, mark: str) -> str:
     return f"{code}-{shade}-{mark}.svg"
 
 
+CAP = 22
+
+
+def captured_svg(code: str) -> str:
+    """A small piece with no square behind it, for the captured-pieces row."""
+    style = ('fill="#ffffff" stroke="#1f1f1f" stroke-width="1" paint-order="stroke"'
+             if code[0] == "w" else 'fill="#1f1f1f" stroke="#8b949e" stroke-width="0.6" paint-order="stroke"')
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{CAP}" height="{CAP}" viewBox="0 0 {CAP} {CAP}">'
+            f'<text x="11" y="18" text-anchor="middle" font-size="19" {style} '
+            f'font-family="\'DejaVu Sans\', \'Segoe UI Symbol\', \'Apple Symbols\', \'Noto Sans Symbols 2\', serif">'
+            f'{GLYPH[code[1]]}︎</text></svg>\n')
+
+
 def write_images() -> int:
     IMG.mkdir(parents=True, exist_ok=True)
-    codes = ["x"] + [c + k for c in "wb" for k in GLYPH]
+    pieces = [c + k for c in "wb" for k in GLYPH]
     n = 0
-    for code in codes:
+    for code in ["x"] + pieces:
         for shade in "ld":
             for mark in MARKS:
                 (IMG / image_name(code, shade, mark)).write_text(square_svg(code, shade, mark), encoding="utf-8")
                 n += 1
+    for code in pieces:
+        (IMG / f"cap-{code}.svg").write_text(captured_svg(code), encoding="utf-8")
+        n += 1
     return n
+
+
+START_COUNT = {"p": 8, "n": 2, "b": 2, "r": 2, "q": 1}
+
+
+def captured(board: chess.Board, colour: bool) -> list[str]:
+    """Pieces of `colour` no longer on the board, most valuable first.
+    A promotion can make a count go up; that is clamped at zero."""
+    out = []
+    for kind in "qrbnp":
+        missing = START_COUNT[kind] - len(board.pieces(chess.PIECE_SYMBOLS.index(kind), colour))
+        out += [("w" if colour else "b") + kind] * max(0, missing)
+    return out
 
 
 # ------------------------------------------------------------------ board html
@@ -202,10 +241,30 @@ def readme_block(state: dict) -> str:
     side = "white" if board.turn == chess.WHITE else "black"
     hint = (f'<a href="{issue_url("chess|new")}">Start a new game</a>' if board.is_game_over()
             else f"Click a {side} piece, then click where it should go.")
-    return (f"{START}\n<p align=\"center\">{status_line(state)}</p>\n"
-            f"<p align=\"center\">\n{board_html(state, 'game/img/', 'game/select/')}\n</p>\n"
-            f"<p align=\"center\"><sub>{hint} Anyone can play: each move is a GitHub issue, "
+    return (f"{START}\n<p>{status_line(state)}</p>\n"
+            f"<p>\n{board_html(state, 'game/img/', 'game/select/')}\n</p>\n"
+            f"{captures_html(board, 'game/img/')}\n{players_html(state)}\n"
+            f"<p><sub>{hint} Anyone can play: each move is a GitHub issue, "
             f"checked for legality by <a href=\"scripts/chess_game.py\">a workflow</a>.</sub></p>\n{END}")
+
+
+def captures_html(board: chess.Board, img_prefix: str) -> str:
+    def row(codes: list[str]) -> str:
+        if not codes:
+            return "<sub>none yet</sub>"
+        return "".join(f'<img src="{img_prefix}cap-{c}.svg" width="{CAP}" height="{CAP}" align="top" '
+                       f'alt="{"white" if c[0] == "w" else "black"} {NAME[c[1]]}">' for c in codes)
+    return (f"<p><sub><b>White captured</b></sub><br>{row(captured(board, chess.BLACK))}<br>"
+            f"<sub><b>Black captured</b></sub><br>{row(captured(board, chess.WHITE))}</p>")
+
+
+def players_html(state: dict) -> str:
+    players = sorted(players_of(state).items(), key=lambda kv: (-kv[1], kv[0].lower()))
+    if not players:
+        return "<p><sub><b>Players</b></sub><br><sub>be the first to move</sub></p>"
+    names = " · ".join(f'<a href="https://github.com/{u}">@{u}</a>' + (f" ×{n}" if n > 1 else "")
+                       for u, n in players)
+    return f"<p><sub><b>Players</b></sub><br>{names}</p>"
 
 
 def select_page(state: dict, sq: int) -> str:

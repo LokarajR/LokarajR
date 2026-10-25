@@ -8,9 +8,13 @@
 
 ## ♟ Play me: community chess
 
+<table>
+<tr>
+<td valign="top" width="55%">
+
 <!-- CHESS:START -->
-<p align="center"><b>Black to move</b> · game 1, move 1 · last: <b>f4</b> by @LokarajR</p>
-<p align="center">
+<p><b>Black to move</b> · game 1, move 1 · last: <b>f4</b> by @LokarajR</p>
+<p>
 <img src="game/img/br-l-n.svg" width="44" height="44" align="top" alt="a8 black rook"><a href="game/select/b8.md"><img src="game/img/bn-d-n.svg" width="44" height="44" align="top" alt="b8 black knight"></a><img src="game/img/bb-l-n.svg" width="44" height="44" align="top" alt="c8 black bishop"><img src="game/img/bq-d-n.svg" width="44" height="44" align="top" alt="d8 black queen"><img src="game/img/bk-l-n.svg" width="44" height="44" align="top" alt="e8 black king"><img src="game/img/bb-d-n.svg" width="44" height="44" align="top" alt="f8 black bishop"><a href="game/select/g8.md"><img src="game/img/bn-l-n.svg" width="44" height="44" align="top" alt="g8 black knight"></a><img src="game/img/br-d-n.svg" width="44" height="44" align="top" alt="h8 black rook"><br>
 <a href="game/select/a7.md"><img src="game/img/bp-d-n.svg" width="44" height="44" align="top" alt="a7 black pawn"></a><a href="game/select/b7.md"><img src="game/img/bp-l-n.svg" width="44" height="44" align="top" alt="b7 black pawn"></a><a href="game/select/c7.md"><img src="game/img/bp-d-n.svg" width="44" height="44" align="top" alt="c7 black pawn"></a><a href="game/select/d7.md"><img src="game/img/bp-l-n.svg" width="44" height="44" align="top" alt="d7 black pawn"></a><a href="game/select/e7.md"><img src="game/img/bp-d-n.svg" width="44" height="44" align="top" alt="e7 black pawn"></a><a href="game/select/f7.md"><img src="game/img/bp-l-n.svg" width="44" height="44" align="top" alt="f7 black pawn"></a><a href="game/select/g7.md"><img src="game/img/bp-d-n.svg" width="44" height="44" align="top" alt="g7 black pawn"></a><a href="game/select/h7.md"><img src="game/img/bp-l-n.svg" width="44" height="44" align="top" alt="h7 black pawn"></a><br>
 <img src="game/img/x-l-n.svg" width="44" height="44" align="top" alt="a6 empty"><img src="game/img/x-d-n.svg" width="44" height="44" align="top" alt="b6 empty"><img src="game/img/x-l-n.svg" width="44" height="44" align="top" alt="c6 empty"><img src="game/img/x-d-n.svg" width="44" height="44" align="top" alt="d6 empty"><img src="game/img/x-l-n.svg" width="44" height="44" align="top" alt="e6 empty"><img src="game/img/x-d-n.svg" width="44" height="44" align="top" alt="f6 empty"><img src="game/img/x-l-n.svg" width="44" height="44" align="top" alt="g6 empty"><img src="game/img/x-d-n.svg" width="44" height="44" align="top" alt="h6 empty"><br>
@@ -20,8 +24,29 @@
 <img src="game/img/wp-l-n.svg" width="44" height="44" align="top" alt="a2 white pawn"><img src="game/img/wp-d-n.svg" width="44" height="44" align="top" alt="b2 white pawn"><img src="game/img/wp-l-n.svg" width="44" height="44" align="top" alt="c2 white pawn"><img src="game/img/wp-d-n.svg" width="44" height="44" align="top" alt="d2 white pawn"><img src="game/img/wp-l-n.svg" width="44" height="44" align="top" alt="e2 white pawn"><img src="game/img/x-d-l.svg" width="44" height="44" align="top" alt="f2 empty"><img src="game/img/wp-l-n.svg" width="44" height="44" align="top" alt="g2 white pawn"><img src="game/img/wp-d-n.svg" width="44" height="44" align="top" alt="h2 white pawn"><br>
 <img src="game/img/wr-d-n.svg" width="44" height="44" align="top" alt="a1 white rook"><img src="game/img/wn-l-n.svg" width="44" height="44" align="top" alt="b1 white knight"><img src="game/img/wb-d-n.svg" width="44" height="44" align="top" alt="c1 white bishop"><img src="game/img/wq-l-n.svg" width="44" height="44" align="top" alt="d1 white queen"><img src="game/img/wk-d-n.svg" width="44" height="44" align="top" alt="e1 white king"><img src="game/img/wb-l-n.svg" width="44" height="44" align="top" alt="f1 white bishop"><img src="game/img/wn-d-n.svg" width="44" height="44" align="top" alt="g1 white knight"><img src="game/img/wr-l-n.svg" width="44" height="44" align="top" alt="h1 white rook">
 </p>
-<p align="center"><sub>Click a black piece, then click where it should go. Anyone can play: each move is a GitHub issue, checked for legality by <a href="scripts/chess_game.py">a workflow</a>.</sub></p>
+<p><sub><b>White captured</b></sub><br><sub>none yet</sub><br><sub><b>Black captured</b></sub><br><sub>none yet</sub></p>
+<p><sub><b>Players</b></sub><br><a href="https://github.com/LokarajR">@LokarajR</a></p>
+<p><sub>Click a black piece, then click where it should go. Anyone can play: each move is a GitHub issue, checked for legality by <a href="scripts/chess_game.py">a workflow</a>.</sub></p>
 <!-- CHESS:END -->
+
+</td>
+<td valign="top" width="45%">
+
+<sub><b>My GitHub contributions, eaten by a snake</b></sub>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/LokarajR/LokarajR/output/github-snake-dark.svg">
+  <img src="https://raw.githubusercontent.com/LokarajR/LokarajR/output/github-snake.svg" width="100%" alt="Snake animation eating the squares of my GitHub contribution graph">
+</picture>
+
+<sub><b>LeetCode</b></sub>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://leetcard.jacoblin.cool/AZF12FQrNh?theme=dark&font=Fira%20Code&ext=heatmap">
+  <img src="https://leetcard.jacoblin.cool/AZF12FQrNh?theme=light&font=Fira%20Code&ext=heatmap" width="100%" alt="LeetCode stats and submission heatmap for AZF12FQrNh">
+</picture>
+
+</td>
+</tr>
+</table>
 
 ## What I've built
 

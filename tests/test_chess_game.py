@@ -49,6 +49,35 @@ class Moves(unittest.TestCase):
         self.assertEqual((new["fen"], new["ply"], new["game"]), (chess.STARTING_FEN, 0, 3))
 
 
+class CapturesAndPlayers(unittest.TestCase):
+    def test_players_are_counted_per_move(self):
+        s = g.new_state()
+        s, _ = g.apply_title(s, "chess|move|e2e4|0", "alice")
+        s, _ = g.apply_title(s, "chess|move|e7e5|1", "bob")
+        s, _ = g.apply_title(s, "chess|move|g1f3|2", "alice")
+        self.assertEqual(s["players"], {"alice": 2, "bob": 1})
+        html = g.players_html(s)
+        self.assertLess(html.index("@alice"), html.index("@bob"))
+        self.assertIn("×2", html)
+
+    def test_old_state_without_players_uses_last_mover(self):
+        old = {"fen": chess.STARTING_FEN, "ply": 1, "game": 1,
+               "last": {"uci": "f2f4", "san": "f4", "user": "LokarajR"}}
+        self.assertEqual(g.players_of(old), {"LokarajR": 1})
+
+    def test_new_game_clears_players(self):
+        self.assertEqual(g.new_state(2)["players"], {})
+
+    def test_captured_pieces(self):
+        board = chess.Board("rnbqkbnr/ppp1pppp/8/8/8/8/PPP1PPPP/RNB1KBNR w KQkq - 0 1")
+        self.assertEqual(g.captured(board, chess.WHITE), ["wq", "wp"])
+        self.assertEqual(g.captured(board, chess.BLACK), ["bp"])
+        self.assertEqual(g.captured(chess.Board(), chess.WHITE), [])
+
+    def test_captured_image_is_valid_svg(self):
+        ET.fromstring(g.captured_svg("bq"))
+
+
 class Rendering(unittest.TestCase):
     def test_every_square_image_is_valid_svg(self):
         for code in ["x", "wk", "bp"]:
