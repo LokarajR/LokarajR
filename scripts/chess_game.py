@@ -34,6 +34,7 @@ STATE = GAME / "state.json"
 README = ROOT / "README.md"
 OWNER = "LokarajR"
 START, END = "<!-- CHESS:START -->", "<!-- CHESS:END -->"
+SIDE_START, SIDE_END = "<!-- CHESS-SIDE:START -->", "<!-- CHESS-SIDE:END -->"
 
 SQ = 44
 LIGHT, DARK = "#ebecd0", "#779556"
@@ -243,9 +244,22 @@ def readme_block(state: dict) -> str:
             else f"Click a {side} piece, then click where it should go.")
     return (f"{START}\n<p>{status_line(state)}</p>\n"
             f"<p>\n{board_html(state, 'game/img/', 'game/select/')}\n</p>\n"
-            f"{captures_html(board, 'game/img/')}\n{players_html(state)}\n"
             f"<p><sub>{hint} Anyone can play: each move is a GitHub issue, "
             f"checked for legality by <a href=\"scripts/chess_game.py\">a workflow</a>.</sub></p>\n{END}")
+
+
+def side_block(state: dict) -> str:
+    """Captured pieces and players, shown in the column beside the board."""
+    board = chess.Board(state["fen"])
+    return f"{SIDE_START}\n{captures_html(board, 'game/img/')}\n{players_html(state)}\n{SIDE_END}"
+
+
+def replace_block(text: str, start: str, end: str, block: str) -> str:
+    if start not in text or end not in text:
+        raise SystemExit(f"README is missing the {start} / {end} markers")
+    head, rest = text.split(start, 1)
+    _, tail = rest.split(end, 1)
+    return head + block + tail
 
 
 def captures_html(board: chess.Board, img_prefix: str) -> str:
@@ -288,11 +302,9 @@ def render(state: dict) -> None:
         for sq in sorted({m.from_square for m in board.legal_moves}):
             (SELECT / f"{chess.square_name(sq)}.md").write_text(select_page(state, sq), encoding="utf-8")
     text = README.read_text(encoding="utf-8")
-    if START not in text or END not in text:
-        raise SystemExit("README is missing the CHESS:START / CHESS:END markers")
-    head, rest = text.split(START, 1)
-    _, tail = rest.split(END, 1)
-    README.write_text(head + readme_block(state) + tail, encoding="utf-8")
+    text = replace_block(text, START, END, readme_block(state))
+    text = replace_block(text, SIDE_START, SIDE_END, side_block(state))
+    README.write_text(text, encoding="utf-8")
 
 
 def main(argv: list[str]) -> int:

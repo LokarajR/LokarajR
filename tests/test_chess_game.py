@@ -74,6 +74,18 @@ class CapturesAndPlayers(unittest.TestCase):
         self.assertEqual(g.captured(board, chess.BLACK), ["bp"])
         self.assertEqual(g.captured(chess.Board(), chess.WHITE), [])
 
+    def test_side_block_is_separate_from_board(self):
+        s = g.new_state()
+        self.assertNotIn("Players", g.readme_block(s))
+        side = g.side_block(s)
+        self.assertTrue(side.startswith(g.SIDE_START) and side.endswith(g.SIDE_END))
+        self.assertIn("White captured", side)
+
+    def test_replace_block_requires_markers(self):
+        self.assertEqual(g.replace_block("a<!--S-->x<!--E-->b", "<!--S-->", "<!--E-->", "Y"), "aYb")
+        with self.assertRaises(SystemExit):
+            g.replace_block("no markers", "<!--S-->", "<!--E-->", "Y")
+
     def test_captured_image_is_valid_svg(self):
         ET.fromstring(g.captured_svg("bq"))
 

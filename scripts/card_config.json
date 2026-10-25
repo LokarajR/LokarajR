@@ -1,5 +1,6 @@
 {
   "owner": "LokarajR",
+  "leetcode": "AZF12FQrNh",
   "thesis": "Build it. Test it. Ship it.",
   "featured": [
     {"repo": "Distracted-Driver-Detection-PS48", "label": "Distracted Driver Detection", "pillar": "Vision"},

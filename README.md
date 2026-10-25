@@ -24,25 +24,22 @@
 <img src="game/img/wp-l-n.svg" width="44" height="44" align="top" alt="a2 white pawn"><img src="game/img/wp-d-n.svg" width="44" height="44" align="top" alt="b2 white pawn"><img src="game/img/wp-l-n.svg" width="44" height="44" align="top" alt="c2 white pawn"><img src="game/img/wp-d-n.svg" width="44" height="44" align="top" alt="d2 white pawn"><img src="game/img/wp-l-n.svg" width="44" height="44" align="top" alt="e2 white pawn"><img src="game/img/x-d-l.svg" width="44" height="44" align="top" alt="f2 empty"><img src="game/img/wp-l-n.svg" width="44" height="44" align="top" alt="g2 white pawn"><img src="game/img/wp-d-n.svg" width="44" height="44" align="top" alt="h2 white pawn"><br>
 <img src="game/img/wr-d-n.svg" width="44" height="44" align="top" alt="a1 white rook"><img src="game/img/wn-l-n.svg" width="44" height="44" align="top" alt="b1 white knight"><img src="game/img/wb-d-n.svg" width="44" height="44" align="top" alt="c1 white bishop"><img src="game/img/wq-l-n.svg" width="44" height="44" align="top" alt="d1 white queen"><img src="game/img/wk-d-n.svg" width="44" height="44" align="top" alt="e1 white king"><img src="game/img/wb-l-n.svg" width="44" height="44" align="top" alt="f1 white bishop"><img src="game/img/wn-d-n.svg" width="44" height="44" align="top" alt="g1 white knight"><img src="game/img/wr-l-n.svg" width="44" height="44" align="top" alt="h1 white rook">
 </p>
-<p><sub><b>White captured</b></sub><br><sub>none yet</sub><br><sub><b>Black captured</b></sub><br><sub>none yet</sub></p>
-<p><sub><b>Players</b></sub><br><a href="https://github.com/LokarajR">@LokarajR</a></p>
 <p><sub>Click a black piece, then click where it should go. Anyone can play: each move is a GitHub issue, checked for legality by <a href="scripts/chess_game.py">a workflow</a>.</sub></p>
 <!-- CHESS:END -->
 
 </td>
 <td valign="top" width="45%">
 
-<sub><b>My GitHub contributions, eaten by a snake</b></sub>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/LokarajR/LokarajR/output/github-snake-dark.svg">
-  <img src="https://raw.githubusercontent.com/LokarajR/LokarajR/output/github-snake.svg" width="100%" alt="Snake animation eating the squares of my GitHub contribution graph">
-</picture>
+<sub><b>My GitHub contributions, eaten by a snake</b></sub><br>
+<img src="https://raw.githubusercontent.com/LokarajR/LokarajR/output/github-snake-dark.svg" width="100%" alt="Snake animation eating the squares of my GitHub contribution graph">
 
-<sub><b>LeetCode</b></sub>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://leetcard.jacoblin.cool/AZF12FQrNh?theme=dark&font=Fira%20Code&ext=heatmap">
-  <img src="https://leetcard.jacoblin.cool/AZF12FQrNh?theme=light&font=Fira%20Code&ext=heatmap" width="100%" alt="LeetCode stats and submission heatmap for AZF12FQrNh">
-</picture>
+<sub><b>LeetCode</b></sub><br>
+<a href="https://leetcode.com/u/AZF12FQrNh/"><img src="assets/leetcode-heatmap.svg" width="100%" alt="My LeetCode submissions over the last year as a heatmap"></a>
+
+<!-- CHESS-SIDE:START -->
+<p><sub><b>White captured</b></sub><br><sub>none yet</sub><br><sub><b>Black captured</b></sub><br><sub>none yet</sub></p>
+<p><sub><b>Players</b></sub><br><a href="https://github.com/LokarajR">@LokarajR</a></p>
+<!-- CHESS-SIDE:END -->
 
 </td>
 </tr>

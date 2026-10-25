@@ -36,14 +36,19 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Commit only if the card changed
+      # LeetCode is a separate source: if it is down, the card still updates
+      # and the last good heatmap stays.
+      - name: Generate LeetCode heatmap
+        run: python scripts/leetcode_heatmap.py || echo "::warning::LeetCode unavailable; kept the previous heatmap"
+
+      - name: Commit only if something changed
         run: |
           if git diff --quiet -- assets/; then
-            echo "System card unchanged; nothing to commit."
+            echo "Card and heatmap unchanged; nothing to commit."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/system-card-dark.svg assets/system-card-light.svg
-          git commit -m "chore: refresh system card"
+          git add assets/system-card-dark.svg assets/system-card-light.svg assets/leetcode-heatmap.svg
+          git commit -m "chore: refresh system card and LeetCode heatmap"
           git push
