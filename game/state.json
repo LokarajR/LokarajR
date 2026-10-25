@@ -6,15 +6,16 @@
       "san": "fxe5"
     }
   ],
-  "fen": "rnbqkbnr/pppp1ppp/8/4P3/8/8/PPPPP1PP/RNBQKBNR b KQkq - 0 2",
+  "fen": "rnbqkbnr/pppp2pp/5p2/4P3/8/8/PPPPP1PP/RNBQKBNR w KQkq - 0 3",
   "game": 1,
   "last": {
-    "san": "fxe5",
-    "uci": "f4e5",
-    "user": "LokarajR"
+    "san": "f6",
+    "uci": "f7f6",
+    "user": "Naveen-Jayaraj"
   },
   "players": {
-    "LokarajR": 3
+    "LokarajR": 3,
+    "Naveen-Jayaraj": 1
   },
-  "ply": 3
+  "ply": 4
 }
