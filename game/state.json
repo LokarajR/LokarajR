@@ -4,18 +4,23 @@
       "by": "LokarajR",
       "piece": "bp",
       "san": "fxe5"
+    },
+    {
+      "by": "Naveen-Jayaraj",
+      "piece": "wp",
+      "san": "fxe5"
     }
   ],
-  "fen": "rnbqkbnr/pppp2pp/5p2/4P3/8/5N2/PPPPP1PP/RNBQKB1R b KQkq - 1 3",
+  "fen": "rnbqkbnr/pppp2pp/8/4p3/8/5N2/PPPPP1PP/RNBQKB1R w KQkq - 0 4",
   "game": 1,
   "last": {
-    "san": "Nf3",
-    "uci": "g1f3",
+    "san": "fxe5",
+    "uci": "f6e5",
     "user": "Naveen-Jayaraj"
   },
   "players": {
     "LokarajR": 3,
-    "Naveen-Jayaraj": 2
+    "Naveen-Jayaraj": 3
   },
-  "ply": 5
+  "ply": 6
 }
