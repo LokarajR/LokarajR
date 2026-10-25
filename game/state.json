@@ -1,14 +1,20 @@
 {
-  "captures": [],
-  "fen": "rnbqkbnr/pppp1ppp/8/4p3/5P2/8/PPPPP1PP/RNBQKBNR w KQkq - 0 2",
+  "captures": [
+    {
+      "by": "LokarajR",
+      "piece": "bp",
+      "san": "fxe5"
+    }
+  ],
+  "fen": "rnbqkbnr/pppp1ppp/8/4P3/8/8/PPPPP1PP/RNBQKBNR b KQkq - 0 2",
   "game": 1,
   "last": {
-    "san": "e5",
-    "uci": "e7e5",
+    "san": "fxe5",
+    "uci": "f4e5",
     "user": "LokarajR"
   },
   "players": {
-    "LokarajR": 2
+    "LokarajR": 3
   },
-  "ply": 2
+  "ply": 3
 }
